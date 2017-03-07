@@ -1,0 +1,204 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">应用管理助手</string>
+    <string name="short_cut_name">一键加速</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_memory_clean">内存加速</string>
+    <string name="app_rublish_clean">垃圾清理</string>
+    <string name="app_autostart_manage">自启管理</string>
+    <string name="app_software_manage">软件管理</string>
+    <string name="cleaned">清理垃圾 (<xliff:g id="memory">%1$s</xliff:g>)</string>
+    <string name="empty_cache">缓存为空.</string>
+    <string name="scanning">扫描中…</string>
+    <string name="scanning_m_of_n">扫描中 %1$d/%2$d</string>
+    <string name="software_top_text">已安装%1$d款软件,剩余存储空间%2$s</string>
+
+
+    <string name="category_other">其他</string>
+    <string name="category_def">常规设置</string>
+    <string name="settings_basic">基本设置</string>
+    <string name="category_advanced">高级设置</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_version_update">检查更新</string>
+    <string name="settings_grade">给我好评</string>
+    <string name="settings_share">推荐给好友</string>
+
+    <string name="title_settings">设置</string>
+
+    <string name="refresh_cpu">cpu</string>
+    <string name="power_screen">显示屏</string>
+    <string name="power_wifi">Wi-Fi</string>
+    <string name="power_bluetooth">蓝牙</string>
+    <string name="power_cell">手机信号</string>
+    <string name="power_phone">语音通话</string>
+    <string name="power_idle">手机待机</string>
+    <string name="process_kernel_label">Android OS</string>
+    <string name="process_mediaserver_label">媒体服务器</string>
+
+    <string name="battery_history_days"><xliff:g id="DAYS">%1$d</xliff:g> 天 <xliff:g id="HOURS">%2$d</xliff:g> 小时 <xliff:g id="MINUTES">%3$d</xliff:g> 分 <xliff:g id="SECONDS">%4$d</xliff:g> 秒</string>
+    <string name="battery_history_hours"><xliff:g id="HOURS">%1$d</xliff:g> 小时 <xliff:g id="MINUTES">%2$d</xliff:g> 分 <xliff:g id="SECONDS">%3$d</xliff:g> 秒</string>
+    <string name="battery_history_minutes"><xliff:g id="MINUTES">%1$d</xliff:g> 分 <xliff:g id="SECONDS">%2$d</xliff:g> 秒</string>
+    <string name="battery_history_seconds"><xliff:g id="SECONDS">%1$d</xliff:g> 秒</string>
+
+    <string name="battery_info_status_charging_ac">（交流电）</string>
+    <string name="battery_info_status_charging_usb">(USB)</string>
+    <string name="battery_info_status_discharging">正在耗电</string>
+    <string name="battery_info_status_not_charging">未在充电</string>
+    <string name="battery_info_status_full">电量充足</string>
+    <string name="battery_info_status_unknown">未知</string>
+    <string name="battery_info_status_charging">正在充电</string>
+
+    <string name="power_usage_level_and_status"><xliff:g id="LEVEL">%1$s</xliff:g> - <xliff:g id="STATUS">%2$s</xliff:g></string>
+
+
+    <string name="title_point">提示</string>
+    <string name="title_export">导出中...</string>
+    <string name="dialog_message_no_sdcard">你的设备尚未挂载SD卡，请检查后重试。</string>
+    <string name="dialog_message_file_exist">安装包 %1$s 已存在于文件夹 %2$s 下，是否覆盖？</string>
+    <string name="dialog_message_export">"确定要将 %1$s 的安装包导出到本地目录 %2$s 下吗?</string>
+    <string name="dialog_message_delete">"确定要删除 %1$s 的安装包文件吗?</string>
+
+    <string name="dialog_know">知道了</string>
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_go_setting_safe">去设置</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_do_not_point">不再提示</string>
+    <string name="title_progress_export">导出中&#8230;</string>
+    <string name="please_wait">请稍等&#8230;</string>
+    <string name="title_export_finish">导出成功</string>
+    <string name="dialog_message_export_finish">安装包 %1$s 已成功导出到本地目录%2$s，是否查看文件？</string>
+    <string name="dialog_confirm_watch">是，查看</string>
+    <string name="dialog_confirm_yes">是</string>
+    <string name="dialog_confirm_export">确定导出</string>
+    <string name="dialog_confirm_delete">确定删除</string>
+    <string name="dialog_action_exist_not_override">不覆盖</string>
+    <string name="dialog_action_exist_override">覆盖</string>
+    <string name="dialog_action_exist_watch_now">查看文件</string>
+    <string name="dialog_cancel_watch">不</string>
+
+    <string name="fail_open_app">打开 %1$s 失败,请检查应用是否存在。</string>
+    <string name="fail_export_app">导出 %1$s 安装包失败,请检查应用是否存在。</string>
+    <string name="fail_share_app">分享 %1$s 安装包失败,请检查应用是否存在。</string>
+    <string name="fail_install_app">安装 %1$s 失败,请检查应用是否存在。</string>
+
+    <!-- For tab: General -->
+    <string name="lb_panel_device_label">标签</string>
+    <string name="lb_manufacturer">制造商</string>
+    <string name="lb_model">型号</string>
+    <string name="lb_codename">代号</string>
+
+
+    <string name="lb_panel_identity">识别信息</string>
+    <string name="lb_imei">IMEI</string>
+    <string name="lb_imsi">IMSI</string>
+    <string name="lb_serial_number">序列码</string>
+    <string name="lb_phone_number">电话号码</string>
+    <string name="lb_ip">IP</string>
+    <string name="lb_wifi_mac">Wi-Fi MAC</string>
+
+    <string name="lb_panel_network_operator">MOBILE NETWORK OPERATOR</string>
+    <string name="lb_network_operator_code">Operator Code</string>
+    <string name="lb_network_operator_name">Operator Name</string>
+    <string name="lb_phone_type">Phone Type</string>
+
+    <!-- For tab: Software -->
+    <string name="lb_panel_android">ANDROID</string>
+    <string name="lb_android_version">安卓版本</string>
+    <string name="lb_android_build">软件版本</string>
+    <string name="lb_android_build_fingerprint">Build Fingerprint</string>
+    <string name="lb_android_build_time">安装时间</string>
+    <string name="lb_android_sdk_int">SDK 版本</string>
+
+    <string name="lb_panel_more">MORE</string>
+    <string name="lb_kernel_version">内核版本</string>
+    <string name="lb_baseband">基带版本</string>
+    <string name="lb_board">Board</string>
+    <string name="lb_bootloader">Bootloader</string>
+
+    <!-- For tab: Hardware -->
+    <string name="lb_panel_cpu">CPU</string>
+    <string name="lb_cpu_processor">处理器</string>
+    <string name="lb_cpu_implementer">制造商</string>
+    <string name="lb_cpu_part">架构</string>
+    <string name="lb_cpu_cores">核心数</string>
+    <string name="lb_cpu_frequency">频率</string>
+
+    <string name="lb_panel_display">屏幕</string>
+    <string name="lb_dimension">尺寸</string>
+    <string name="lb_resolution">分辨率</string>
+    <string name="lb_density">密度</string>
+    <string name="lb_gpu_renderer">GPU Renderer</string>
+    <string name="lb_gpu_vendor">GPU Vendor</string>
+    <string name="lb_gl_version">OpenGL Version</string>
+
+    <string name="lb_panel_battery">电池</string>
+    <string name="lb_battery_technology">技术</string>
+    <string name="lb_battery_present">状态</string>
+    <string name="lb_battery_max_level">最大充电量</string>
+    <string name="lb_battery_health">健康状态</string>
+
+    <string name="lb_panel_memory">存储</string>
+    <string name="lb_ram">RAM</string>
+    <string name="lb_internal_storage">Internal Storage</string>
+    <string name="lb_external_storage">External Storage</string>
+
+    <string name="lb_panel_camera">CAMERA</string>
+    <string name="lb_back">Back</string>
+    <string name="lb_front">Front</string>
+
+    <!-- For tab: Status -->
+    <string name="lb_panel_cpu_load">CPU负载</string>
+    <string name="lb_cpu_load_total">总量</string>
+    <string name="lb_cpu_procs">核心数</string>
+    <string name="btn_apps_manager">Apps Manager</string>
+
+    <string name="lb_panel_memory_usage">存储用量</string>
+
+    <string name="lb_panel_battery_status">电池状态</string>
+    <string name="lb_battery_level">电量</string>
+    <string name="lb_battery_charge_status">充电状态</string>
+    <string name="lb_battery_power_source">电量来源</string>
+    <string name="lb_battery_temperature">电池温度</string>
+    <string name="lb_battery_voltage">电压</string>
+    <string name="btn_battery_usage">电池用量</string>
+
+    <string name="lb_panel_wifi">WI-FI</string>
+    <string name="lb_wifi_status">状态</string>
+    <string name="lb_wifi_network">连接点</string>
+    <string name="lb_wifi_ip">本地IP</string>
+    <string name="lb_wifi_link_speed">连接速度</string>
+
+    <string name="lb_sim_status">SIM Status</string>
+    <string name="lb_mobile_data_status">Mobile Data</string>
+    <string name="lb_mobile_data_type">Data Type</string>
+    <string name="lb_mobile_data_roaming">Roaming</string>
+
+    <string name="tab_id_general">tab_general</string>
+    <string name="tab_id_status">tab_status</string>
+    <string name="tab_id_software">tab_software</string>
+    <string name="tab_id_hardware">tab_hardware</string>
+
+
+    <string name="tab_title_general">基本信息</string>
+    <string name="tab_title_status">状态信息</string>
+    <string name="tab_title_software">软件信息</string>
+    <string name="tab_title_hardware">硬件信息</string>
+
+
+    <string name="radio_currentpath">在当前目录下搜索</string>
+    <string name="radio_wholepath">在整个目录下搜索</string>
+    <string name="create_file">文本文件</string>
+    <string name="create_folder">文件夹</string>
+    <string name="edit_search_hint">请输入搜索关键字</string>
+    <string name="lable_title">标题</string>
+    <string name="lable_detail">内容</string>
+    <string name="button_refer">保存</string>
+    <string name="button_back">返回</string>
+    <string name="create_hint">请输入文件名称</string>
+
+
+</resources>

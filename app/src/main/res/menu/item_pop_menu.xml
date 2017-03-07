@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="分享应用"
+        android:icon="@mipmap/ic_share_black_24dp"
+        android:id="@+id/pop_share"/>
+    <item
+        android:title="备份应用"
+        android:icon="@mipmap/ic_exit_to_app_black_24dp"
+        android:id="@+id/pop_export"/>
+</menu>

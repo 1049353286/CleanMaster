@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeParent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:homeAsUpIndicator">@mipmap/ic_back</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="AppThemeParent"></style>
+
+    <style name="MyTranslucentAppTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+
+    <style name="ActionButton">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">30dip</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="PanelHeading">
+        <item name="android:textSize">@dimen/panel_heading_text_size</item>
+        <item name="android:textColor">#ffe67e22</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#faaa</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="PanelRowHeader">
+        <item name="android:textSize">@dimen/panel_row_header_text_size</item>
+        <item name="android:textColor">#f000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PanelRowContent">
+        <item name="android:textSize">@dimen/panel_row_content_text_size</item>
+        <item name="android:textColor">#f000</item>
+    </style>
+
+</resources>

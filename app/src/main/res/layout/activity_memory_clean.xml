@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <include layout="@layout/module_toolbar"></include>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:id="@+id/memory_clean_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/memory_clean_header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorPrimary"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <com.github.premnirmal.textcounter.CounterView
+                        android:id="@+id/memory_clean_textCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="48sp"
+                        android:text="110"
+                        android:textColor="@color/white"
+                        app:autoStart="false"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/margin_right"
+                        android:layout_toRightOf="@+id/memory_clean_textCounter"
+                        android:id="@+id/sufix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="KB"
+                        android:textSize="@dimen/text_size_middle" />
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/margin_right"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/memory_clean_textCounter"
+                        android:layout_below="@+id/sufix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="可清理内存"
+                        android:textSize="@dimen/text_size_middle" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:layout_below="@id/memory_clean_header"
+                android:id="@+id/memory_clean_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_200"
+                android:fitsSystemWindows="true"
+                android:clipToPadding="false"
+                android:fastScrollEnabled="true"
+                android:divider="@null"
+                android:dividerHeight="2dp"
+                android:padding="12dp"></ListView>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:id="@+id/memory_clean_bottom_lin"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/clear_button"
+                    android:layout_margin="8dip"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_large"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="一键清理"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <fr.castorflex.android.circularprogressbar.CircularProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:indeterminate="true"
+                app:cpb_stroke_width="3dp"
+                app:cpb_colors="@array/gplus_colors"/>
+
+            <TextView
+                android:id="@+id/progressBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="@string/scanning"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="打开应用"
+        android:id="@+id/pop_open_app"
+        android:icon="@mipmap/ic_installed_black_24dp" />
+
+    <item
+        android:title="卸载应用"
+        android:id="@+id/pop_uninstall_app"
+        android:icon="@mipmap/ic_delete_black_24dp" />
+
+    <item
+        android:title="加入到白名单"
+        android:id="@+id/pop_white_list"
+        android:icon="@mipmap/ic_favorite_black_24dp" />
+
+
+</menu>

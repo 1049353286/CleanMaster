@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.apricot.cleanmaster">
+
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="signature"
+        android:sharedUserId="android.uid.system"
+        tools:ignore="ProtectedPermissions"></uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".base.FragmentContainerActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.SoftwareManageActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.AutoStartManageActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.MemoryCleanActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.CacheCleanActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.AppTaskActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.AppDetailActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.BatteryUsageInfoActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.ApkSearchActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.UninstallCleanActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.AppBackpackActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.PhoneInfoActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.FileManageActivity"></activity>
+        <activity android:name=".ui.AppLockActivity"
+            android:theme="@style/MyTranslucentAppTheme"></activity>
+        <activity android:name=".ui.AppLockerActivity"></activity>
+        <activity android:name=".ui.AppLockSettingActivity"></activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ui.ShortCutActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:taskAffinity="com.souapp.screenlockmanager"
+            android:label="@string/short_cut_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="com.apricot.shortcut" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <service android:name=".service.CoreService"
+            android:exported="false"></service>
+        <service android:name=".service.CleanService"
+            android:exported="false"></service>
+        <service android:name=".service.AppLockerService"
+            android:exported="false"></service>
+
+        <receiver
+            android:name=".broadcast.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".broadcast.SearchBroadCast"></receiver>
+    </application>
+
+</manifest>

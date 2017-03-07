@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@mipmap/ic_recent_black_24dp"
+            android:title="应用管理" />
+        <!--<item-->
+            <!--android:id="@+id/nav_relax"-->
+            <!--android:icon="@mipmap/ic_installed_black_24dp"-->
+            <!--android:title="放松" />-->
+        <item
+            android:id="@+id/nav_appinfo"
+            android:icon="@mipmap/ic_exported_list_black_24dp"
+            android:title="应用信息" />
+        <item
+            android:id="@+id/nav_app_clean"
+            android:icon="@mipmap/ic_exported_list_black_24dp"
+            android:title="应用清理" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="none">
+
+
+        <item android:id="@+id/nav_app_backpack"
+            android:icon="@mipmap/ic_settings_black_24dp"
+            android:title="应用备份"/>
+
+        <item android:id="@+id/nav_file_manage"
+            android:icon="@mipmap/ic_about_black_24dp"
+            android:title="文件管理"/>
+
+        <item android:id="@+id/nav_app_lock"
+            android:icon="@mipmap/ic_exported_list_black_24dp"
+            android:title="应用锁"/>
+
+        <item android:id="@+id/nav_settings"
+            android:icon="@mipmap/ic_help_black_24dp"
+            android:title="设置"/>
+    </group>
+</menu>
