@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="changelog-2.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.changeloglib/changelog/2.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.gabrielemariotti.changeloglib/changelog/2.1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.gabrielemariotti.changeloglib/changelog/2.1.0/7c71b27f5efcc94a806f57489c8209bbd7aa516/changelog-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

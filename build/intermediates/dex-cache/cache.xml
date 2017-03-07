@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.github.lzyzsd\circleprogress\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e6f9fb0d2ea982d656d6dca785a9097659395874">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.lzyzsd-circleprogress-1.1.0_09157ecd8bf9b6a601ddd1c489dfecf263132d53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_3c86dae1c16ac04a6f5e209f4262f08643c3a2be\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_01cb4bfe82dbbce3049d72e22051641647c85069\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_8bc85cb01064d06ebd904fc99d1225fc9ce4aaf7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_268f4bc5cd7ed6ebd1c6461be707f4c3ff7965df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jakewharton-butterknife-8.4.0_fb45feae3e2f380d029b8b69baeb09b38d89b79f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library-circular\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e3dfc7e44f8fde989ba4e8a5fdde34d9a32447c6">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.castorflex.smoothprogressbar-library-circular-1.0.0_cd2574a68bda8a8996f5580c3e9079ffae35626f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_17b5827bec374ddcd101095035385bdfe65f7e80\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.systembartint\systembartint\1.0.3\de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287\systembartint-1.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\systembartint-1.0.3_6ccc870c95e98aff1e251e0026fdb98f48f925b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_0944c585183a1b710db242cb12bf3aafd8c57e6d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_927adda6024263459bc45aa3d0d222a59c4e17fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_0ed4a9be7b8e5b456746d0eb823f73dc2e367d2a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_770996086e792a0042be95c962571b7e82d65385\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_f930f97ef71c09b61896567812c2999fd1e6fd9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c71d8b44765d0795535548a4e365e2b5209a0786\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.github.premnirmal\TextCounter\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="16888ea155da714aafcdb7fd5aeb0b9a9a521db1">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.premnirmal-TextCounter-1.1.0_9b6c7733d0e59f79de69db7662f6cc03b3b69457\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_41049f91e7d4721788faebaabf412cb271cba799\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0c5d067439648370cce5f530909ed183334f35a">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ddeaf863086802e93824756966f02dab4000c3e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_2deb6a92b082a29e6eecfa077f720693de5436fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.github.lawloretienne\quickreturn\0.0.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b69d993fbc16501d4d1d39dd58654cf4baccca0">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.lawloretienne-quickreturn-0.0.3_9627f8dfbbba65b61eed4343990f59a3ca90f2c1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_9f0072aa630ecc3ed58c4fccbd596a67259ac954\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_77267359650fd39f30ebae5524fb28a825b89671\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.4.0\ea392375cf9ff59234a82e7928a204215ccc98cd\butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-annotations-8.4.0_aa83b360167784d953883265f7f98a2f57a14fec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_fb1a3436485323118671844fd6e6a4afef92357d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\me.imid.swipebacklayout.lib\library\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d0958dbac8e7be76690b8e85d91698dfadbd81e">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\me.imid.swipebacklayout.lib-library-1.0.0_fc88ff6f7ecaf255e378463e4ef64ceef16f66fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.github.gabrielemariotti.changeloglib\changelog\2.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2334fc225d7a9f3bd942e19bffcc53bd7d1bf77f">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.gabrielemariotti.changeloglib-changelog-2.1.0_05398314c3a76013dc5e21a74aee89951e668b7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_c8ae758af6176803536c1576ec947efc9d2fed65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f9f72a337f194d759fd9ad4e39beaccd18435aaf">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cb20341b86cf2f623e3b4c3e963462bb9fd4e598\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\exploded-aar\com.android.support\percent\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c394e9a7e1552a4499c7d7d25e7eccd6a533b6df">
+        <dex dex="C:\Users\10493\AndroidStudioProjects\CleanMaster\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-percent-24.2.1_a75667342ceb36e679d5cd750324ca99d807810e\classes.dex" />
+    </item>
+
+</items>
