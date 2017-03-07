@@ -61,6 +61,8 @@ public class MainActivity extends BaseActivity{
 //            createShortCut();
 //        }
         createShortCut();
+
+        //git test
     }
 
     private void createShortCut() {
