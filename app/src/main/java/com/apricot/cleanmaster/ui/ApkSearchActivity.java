@@ -3,6 +3,7 @@ package com.apricot.cleanmaster.ui;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
 
 import com.apricot.cleanmaster.R;
@@ -25,6 +26,7 @@ public class ApkSearchActivity extends BaseSwipeBackActivity{
     }
     private ListView mListView;
     private ApkSearchAdapter mAdapter;
+    private View mEmptyView;
 
     List<ApkFile> files=new ArrayList<>();
 
@@ -36,6 +38,7 @@ public class ApkSearchActivity extends BaseSwipeBackActivity{
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setTitle("安装包管理");
 
+        mEmptyView=findViewById(R.id.empty);
         ApkSearchUtils apkSearch=new ApkSearchUtils(this);
         apkSearch.queryApkFile();
         files.addAll(apkSearch.getApkFiles());
@@ -55,6 +58,7 @@ public class ApkSearchActivity extends BaseSwipeBackActivity{
 
     private void initViews(){
         mListView= (ListView) findViewById(R.id.lv_apk_search);
+        mListView.setEmptyView(mEmptyView);
         mAdapter = new ApkSearchAdapter(this,files);
         mListView.setAdapter(mAdapter);
         Log.d("MainActivity","initViews");

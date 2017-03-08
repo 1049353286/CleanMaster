@@ -119,6 +119,9 @@ public class AppLockActivity extends BaseSwipeBackActivity {
 
         for (int i = 0; i < packages.size(); i++) {
             PackageInfo packageInfo = packages.get(i);
+            if(packageInfo.packageName.equals("com.apricot.cleanmaster")){
+                continue;
+            }
             if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) ==  0) {
                 AppLock app = new AppLock(getApplicationContext(), packageInfo.packageName);
                 mAppLockList.add(app);

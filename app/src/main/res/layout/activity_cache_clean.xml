@@ -73,7 +73,7 @@
                 android:fastScrollEnabled="true"
                 android:divider="@null"
                 android:dividerHeight="4dp"
-                android:padding="12dp"></ListView>
+                android:padding="12dp" />
 
             <TextView
                 android:id="@+id/empty"

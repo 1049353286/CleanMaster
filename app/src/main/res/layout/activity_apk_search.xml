@@ -14,4 +14,12 @@
         android:divider="@null"
         android:dividerHeight="2dp"
         android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="没有扫描到安装包"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 </RelativeLayout>

@@ -6,6 +6,7 @@ package com.apricot.cleanmaster.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Environment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.apricot.cleanmaster.R;
 import com.apricot.cleanmaster.bean.ApkFile;
+import com.apricot.cleanmaster.utils.L;
 import com.apricot.cleanmaster.utils.T;
 
 import java.io.File;
@@ -79,8 +81,9 @@ public class UninstallCleanAdapter extends BaseAdapter {
                             .setPositiveButton("是", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    File file =new File(item.getFilePath().replace("/",""));
+                                    File file =new File(Environment.getExternalStorageDirectory()+item.getFilePath());
                                     if(file.exists()){
+                                        L.d("UninstallCleanAdapter",file.getName());
                                         delete(file);
                                         mUninstallInfos.remove(position);
                                         notifyDataSetChanged();
@@ -101,14 +104,18 @@ public class UninstallCleanAdapter extends BaseAdapter {
     }
 
     private void delete(File file){
+        L.d("UninstallCleanAdapter","delete file");
         if(file.isDirectory()){
             File[] files = file.listFiles();
             for(File f : files){
                 delete(f);
+                f.delete();
             }
         }else{
+            L.d("UninstallCleanAdapter",file.getName());
             file.delete();
         }
+        file.delete();
     }
 
     public class ViewHolder{

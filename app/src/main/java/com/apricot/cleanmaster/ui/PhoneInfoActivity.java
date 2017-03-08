@@ -53,9 +53,9 @@ public class PhoneInfoActivity extends BaseSwipeBackActivity{
 
         // check permission first
         boolean readPhoneStatePermissionGranted = Utils.checkPermissionGranted(getBaseContext(), "android.permission.READ_PHONE_STATE");
-        boolean cameraPermissionGranted = Utils.checkPermissionGranted(getBaseContext(), "android.permission.CAMERA");
-        if (!readPhoneStatePermissionGranted || !cameraPermissionGranted) {
-            Toast.makeText(getApplicationContext(), "Please grant all permission required (Phone & Camera)", Toast.LENGTH_LONG).show();
+//        boolean cameraPermissionGranted = Utils.checkPermissionGranted(getBaseContext(), "android.permission.CAMERA");
+        if (!readPhoneStatePermissionGranted) {
+            Toast.makeText(getApplicationContext(), "Please grant all permission required (Phone)", Toast.LENGTH_LONG).show();
             finish();
 
             return;

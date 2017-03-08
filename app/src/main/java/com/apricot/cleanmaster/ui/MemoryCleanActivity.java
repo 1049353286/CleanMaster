@@ -133,12 +133,20 @@ public class MemoryCleanActivity extends BaseSwipeBackActivity implements CoreSe
         List<AppInfo> whitelist=mWhiteListDao.queryAllWhiteApp();
 
         for(AppProcessInfo processInfo:apps){
+            if(processInfo.processName.equals("com.apricot.cleanmaster")){
+                continue;
+            }
             if(!processInfo.isSystem){
-                for(int i=0;i<whitelist.size();i++){
-                    if(!processInfo.appName.equals(whitelist.get(i).getAppName())&&i==(whitelist.size()-1)){
-                        mProcessInfoList.add(processInfo);
-                        allMemory+=processInfo.memory;
+                if(whitelist.size()>0){
+                    for(int i=0;i<whitelist.size();i++){
+                        if(!processInfo.appName.equals(whitelist.get(i).getAppName())&&i==(whitelist.size()-1)){
+                            mProcessInfoList.add(processInfo);
+                            allMemory+=processInfo.memory;
+                        }
                     }
+                }else{
+                    mProcessInfoList.add(processInfo);
+                    allMemory+=processInfo.memory;
                 }
             }
         }

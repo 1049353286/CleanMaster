@@ -63,7 +63,7 @@ public class WhiteListDao {
             AppInfo appInfo=new AppInfo();
             byte[] blob = cursor.getBlob(cursor.getColumnIndex("appIcon"));
             Bitmap bm=BitmapFactory.decodeByteArray(blob,0,blob.length);
-            Drawable drawable=new BitmapDrawable(bm);
+            Drawable drawable=new BitmapDrawable(null,bm);
             appInfo.setAppIcon(drawable);
             appInfo.setAppName(cursor.getString(cursor.getColumnIndex("appName")));
             appInfo.setPkgName(cursor.getString(cursor.getColumnIndex("packageName")));
