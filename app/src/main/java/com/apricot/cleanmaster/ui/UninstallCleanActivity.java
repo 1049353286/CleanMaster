@@ -102,13 +102,14 @@ public class UninstallCleanActivity extends BaseSwipeBackActivity{
 
                 for(ApkFile uninstallInfo:uninstallInfos){
                     for(int i=0;i<userAppInfos.size();i++){
-                        if(!(uninstallInfo.getPackageName().equals(userAppInfos.get(i).getPkgName()))&&(i==userAppInfos.size()-1)){
+                        if(uninstallInfo.getPackageName().equals(userAppInfos.get(i).getPkgName())&&uninstallInfo.getApkName().equals(userAppInfos.get(i).getAppName())){
+                            break;
+                        }else if(i==userAppInfos.size()-1){
                             File file=new File(Environment.getExternalStorageDirectory()+uninstallInfo.getFilePath());
                             if(file.exists()&&file.length()>0){
                                 Log.d("UninstallCleanActivity",uninstallInfo.getApkName()+"残留"+uninstallInfo.getPackageName());
                                 uninstallInfo.setApkIcon(getResources().getDrawable(R.mipmap.trash_bin,null));
                                 junkFile.add(uninstallInfo);
-                                break;
                             }
                         }
                     }
