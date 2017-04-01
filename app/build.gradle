@@ -35,4 +35,6 @@ dependencies {
     compile 'com.github.lawloretienne:quickreturn:0.0.3'
     compile 'com.github.gabrielemariotti.changeloglib:changelog:2.1.0'
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile files('libs/umeng-analytics-v6.1.0.jar')
+    compile files('libs/utdid4all-1.0.4.jar')
 }

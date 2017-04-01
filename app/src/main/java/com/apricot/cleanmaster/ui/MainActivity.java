@@ -22,6 +22,7 @@ import com.apricot.cleanmaster.fragment.SettingsFragment;
 import com.apricot.cleanmaster.service.AppLockerService;
 import com.apricot.cleanmaster.utils.SharedPreferencesUtils;
 import com.apricot.cleanmaster.utils.T;
+import com.umeng.analytics.MobclickAgent;
 
 
 import java.util.Date;
@@ -57,10 +58,10 @@ public class MainActivity extends BaseActivity{
         Intent lockIntent=new Intent(this, AppLockerService.class);
         startService(lockIntent);
 
-//        if (!SharedPreferencesUtils.isShortCut(mContext)) {
-//            createShortCut();
-//        }
-        createShortCut();
+        if (!SharedPreferencesUtils.isShortCut(mContext)) {
+            createShortCut();
+            SharedPreferencesUtils.setIsShortCut(this,true);
+        }
 
     }
 
@@ -213,6 +214,15 @@ public class MainActivity extends BaseActivity{
 
     private void closeDrawer(){
         mDrawerLayout.closeDrawers();
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 

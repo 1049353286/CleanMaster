@@ -37,8 +37,8 @@ import java.nio.channels.FileChannel;
  * Created by mao on 7/19/15.
  */
 public class FileUtil {
-    public static final String KEY_EXPORT_DIR_OLDER = "App+导出目录";
-    public static final String KEY_EXPORT_DIR = "CleanMaster";
+    public static final String KEY_EXPORT_DIR_OLDER = "导出目录";
+    public static final String KEY_EXPORT_DIR = "AppManage";
     /**
      * 判断sd卡是不是处于挂载状态
      * @return

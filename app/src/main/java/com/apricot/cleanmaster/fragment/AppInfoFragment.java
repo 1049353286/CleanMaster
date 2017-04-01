@@ -37,6 +37,7 @@ import com.apricot.cleanmaster.ui.AppTaskActivity;
 import com.apricot.cleanmaster.ui.BatteryUsageInfoActivity;
 import com.apricot.cleanmaster.ui.PhoneInfoActivity;
 import com.apricot.cleanmaster.utils.L;
+import com.umeng.analytics.MobclickAgent;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -54,6 +55,15 @@ public class AppInfoFragment extends BaseFragment{
         ButterKnife.bind(this,v);
         L.d(TAG,"on create view");
         return v;
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart("AppInfoFragment"); //统计页面，"MainScreen"为页面名称，可自定义
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd("AppInfoFragment");
     }
 
     @OnClick(R.id.tv_battery)

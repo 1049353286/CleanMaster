@@ -1,5 +1,6 @@
 package com.apricot.cleanmaster.ui;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
@@ -10,6 +11,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -21,6 +23,7 @@ import com.apricot.cleanmaster.bean.AppProcessInfo;
 import com.apricot.cleanmaster.service.CoreService;
 import com.apricot.cleanmaster.utils.StorageUtil;
 import com.apricot.cleanmaster.utils.T;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -100,9 +103,21 @@ public class ShortCutActivity extends Activity implements CoreService.OnProcessA
 
             layoutparams.leftMargin = rect.left + rect.width() / 2 - width / 2;
 
-            layoutparams.topMargin = rect.top + rect.height() / 2 - height / 2;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                setTranslucentStatus(true);
+                SystemBarTintManager tintManager = new SystemBarTintManager(
+                        this);
+                tintManager.setStatusBarTintEnabled(true);
+                tintManager.setStatusBarTintResource(R.color.transparent);
+                layoutparams.topMargin = rect.top + rect.height() / 2 - height
+                        / 2;
 
-//            mRelativeLayout.updateViewLayout(layoutAnim, layoutparams);
+            } else {
+                layoutparams.topMargin = rect.top + rect.height() / 2 - height
+                        / 2 - statusBarHeight;
+            }
+
+            mRelativeLayout.updateViewLayout(layoutAnim, layoutparams);
         }
         cleanLightImg.startAnimation(AnimationUtils.loadAnimation(this,
                 R.anim.rotate_anim));
@@ -177,7 +192,18 @@ public class ShortCutActivity extends Activity implements CoreService.OnProcessA
     }
 
 
-
+    @TargetApi(19)
+    private void setTranslucentStatus(boolean on) {
+        Window win = getWindow();
+        LayoutParams winParams = win.getAttributes();
+        final int bits = LayoutParams.FLAG_TRANSLUCENT_STATUS;
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
+    }
 
     @Override
     public void onDestroy() {

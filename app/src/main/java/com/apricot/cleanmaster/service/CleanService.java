@@ -29,9 +29,9 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CleanService extends Service{
 
-    public static final String ACTION_CLEAN_AND_EXIT = "com.yzy.cache.cleaner.CLEAN_AND_EXIT";
+    public static final String ACTION_CLEAN_AND_EXIT = "com.apricot.cache.cleaner.CLEAN_AND_EXIT";
 
-    private static final String TAG = "CleanerService";
+    private static final String TAG = "CleanService";
 
     private Method mGetPackageSizeInfoMethod, mFreeStorageAndNotifyMethod;
     private OnCleanActionListener mOnActionListener;
@@ -39,16 +39,16 @@ public class CleanService extends Service{
     private boolean mIsCleaning = false;
     private long mCacheSize = 0;
 
-    public static interface OnCleanActionListener {
-        public void onScanStarted(Context context);
+    public  interface OnCleanActionListener {
+        void onScanStarted(Context context);
 
-        public void onScanProgressUpdated(Context context, int current, int max);
+        void onScanProgressUpdated(Context context, int current, int max);
 
-        public void onScanCompleted(Context context, List<CacheListItem> apps);
+        void onScanCompleted(Context context, List<CacheListItem> apps);
 
-        public void onCleanStarted(Context context);
+        void onCleanStarted(Context context);
 
-        public void onCleanCompleted(Context context, long cacheSize);
+        void onCleanCompleted(Context context, long cacheSize);
     }
 
     @Nullable
@@ -184,7 +184,7 @@ public class CleanService extends Service{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            return null;
+            return mCacheSize;
         }
 
         @Override

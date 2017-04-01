@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white">
     <!-- 用于显示当前路径 -->
+    <include layout="@layout/module_toolbar" />
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
         android:id="@+id/mPath"
         android:textSize="20sp"
-        android:singleLine="true"></TextView>
+        android:singleLine="true" />
     <!-- 用于显示当前目录的内容 -->
     <ListView
         android:id="@+id/android:list"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mPath"
         android:cacheColorHint="#00000000"
         android:divider="@mipmap/line"
-        android:layout_marginBottom="70px"></ListView>
+        android:layout_marginBottom="70px" />
     <!-- 用于显示菜单 -->
     <GridView
         android:id="@+id/file_gridview_toolbar"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:layout_alignParentBottom="true"></GridView>
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

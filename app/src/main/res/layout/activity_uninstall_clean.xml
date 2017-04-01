@@ -9,7 +9,6 @@
         android:id="@+id/lv_uninstall"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fastScrollEnabled="true"
         android:focusable="true"
         android:listSelector="@android:color/transparent"
         android:scrollbars="none"

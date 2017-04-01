@@ -10,10 +10,17 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.ColorRes;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatCallback;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.view.ActionMode;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,9 +39,12 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.apricot.cleanmaster.R;
 import com.apricot.cleanmaster.broadcast.SearchBroadCast;
 import com.apricot.cleanmaster.service.FileService;
+import com.apricot.cleanmaster.utils.L;
+import com.apricot.cleanmaster.utils.T;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -49,8 +59,8 @@ import java.util.List;
  * Created by Apricot on 2016/12/18.
  */
 
-public class FileManageActivity extends ListActivity implements AdapterView.OnItemLongClickListener {
-
+public class FileManageActivity extends ListActivity implements AdapterView.OnItemLongClickListener,AppCompatCallback{
+    public static final String TAG="FileManageActivity";
     // 声明成员变量：
     //存放显示的文件列表的名称
     private List<String> mFileName = null;
@@ -73,10 +83,24 @@ public class FileManageActivity extends ListActivity implements AdapterView.OnIt
     // 代表手机或SD卡，1代表手机，2代表SD卡
     private static int menuPosition = 1;
 
+    //在非AppCompatActivity添加Toolbar
+    private AppCompatDelegate delegate;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_file_manage);
+        delegate = AppCompatDelegate.create(this, this);
+        //we need to call the onCreate() of the AppCompatDelegate
+        delegate.onCreate(savedInstanceState);
+        //we use the delegate to inflate the layout
+        delegate.setContentView(R.layout.activity_file_manage);
+        //Finally, let's add the Toolbar
+        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        delegate.setSupportActionBar(toolbar);
+
+        toolbar.setTitle("文件管理");
+        toolbar.setTitleTextColor(Color.WHITE);
+
         //初始化菜单视图
         initGridViewMenu();
         //初始化菜单监听器
@@ -138,8 +162,12 @@ public class FileManageActivity extends ListActivity implements AdapterView.OnIt
                         break;
                     //回到SD卡根目录
                     case 1:
-                        menuPosition = 2;
-                        initFileListInfo(mSDCard);
+                        if(Environment.getExternalStorageDirectory()!=null){
+                            menuPosition = 2;
+                            initFileListInfo(mSDCard);
+                        }else{
+                            T.showShort(FileManageActivity.this,"未找到SD卡");
+                        }
                         break;
                     //显示搜索对话框
                     case 2:
@@ -515,6 +543,8 @@ public class FileManageActivity extends ListActivity implements AdapterView.OnIt
                 .setPositiveButton("取消",null).show();
     }
 
+
+
     //自定义Adapter内部类
     class FileAdapter extends BaseAdapter {
         //返回键，各种格式的文件的图标
@@ -646,7 +676,7 @@ public class FileManageActivity extends ListActivity implements AdapterView.OnIt
     ServiceConnection mSC;
     RadioGroup mRadioGroup;
     static int mRadioChecked;
-    public static final String KEYWORD_BROADCAST = "com.supermario.file.KEYWORD_BROADCAST";
+    public static final String KEYWORD_BROADCAST = "com.apricot.cleanmaster.KEYWORD_BROADCAST";
     //显示搜索对话框
     private void searchDilalog(){
         //用于确定是在当前目录搜索或者是在整个目录搜索的标志
@@ -697,9 +727,11 @@ public class FileManageActivity extends ListActivity implements AdapterView.OnIt
                             keywordIntent.putExtra("keyword", keyWords);
                             //到这里为止是携带关键字信息并发送了广播，会在Service服务当中接收该广播并提取关键字进行搜索
                             getApplicationContext().sendBroadcast(keywordIntent);
+                            L.d(TAG,"发送广播");
                             //获取用户输入的关键字并发送广播-结束
                             serviceIntent = new Intent(FileManageActivity.this,FileService.class);
                             FileManageActivity.this.startService(serviceIntent);//开启服务，启动搜索
+                            L.d(TAG,"开启搜索服务");
                             isComeBackFromNotification = false;
                         }
                     }
@@ -826,6 +858,22 @@ public class FileManageActivity extends ListActivity implements AdapterView.OnIt
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onSupportActionModeStarted(ActionMode mode) {
+
+    }
+
+    @Override
+    public void onSupportActionModeFinished(ActionMode mode) {
+
+    }
+
+    @Nullable
+    @Override
+    public ActionMode onWindowStartingSupportActionMode(ActionMode.Callback callback) {
+        return null;
     }
 
 

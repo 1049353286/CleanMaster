@@ -29,8 +29,8 @@ public class FileService extends Service{
     private FileHandler mFileHandler;
     private ArrayList<String> mFileName = null;
     private ArrayList<String> mFilePaths = null;
-    public static final String FILE_SEARCH_COMPLETED = "com.supermario.file.FILE_SEARCH_COMPLETED";
-    public static final String FILE_NOTIFICATION = "com.supermario.file.FILE_NOTIFICATION";
+    public static final String FILE_SEARCH_COMPLETED = "com.apricot.cleanmaster.service.FILE_SEARCH_COMPLETED";
+    public static final String FILE_NOTIFICATION = "com.apricot.cleanmaster.service.FILE_NOTIFICATION";
     @Override
     public IBinder onBind(Intent arg0) {
         return null;
@@ -117,6 +117,7 @@ public class FileService extends Service{
     /**通知*/
     private void fileSearchNotification(){
         Notification.Builder builder=new Notification.Builder(this);
+        builder.setSmallIcon(R.mipmap.ic_launcher);
         builder.setContentTitle("后台搜索中...");
         builder.setContentText("在"+SearchBroadCast.mServiceSearchPath+"下搜索");
 

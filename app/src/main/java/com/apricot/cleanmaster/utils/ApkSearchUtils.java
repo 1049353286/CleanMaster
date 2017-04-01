@@ -169,11 +169,20 @@ public class ApkSearchUtils {
                 MediaStore.Files.FileColumns._ID, MediaStore.Files.FileColumns.DATA, MediaStore.Files.FileColumns.SIZE, MediaStore.Files.FileColumns.DATE_MODIFIED
         };
 
-        return context.getContentResolver().query(uri, columns, selection, null, null);
+        if(context.getContentResolver().query(uri, columns, selection, null, null)!=null){
+            Cursor cursor=context.getContentResolver().query(uri, columns, selection, null, null);
+            return cursor;
+        }else{
+            return null;
+        }
+
     }
 
     public void queryApkFile(){
         Cursor cursor=query();
+        if(cursor==null){
+            return;
+        }
         while(cursor.moveToNext()){
             ApkFile file=new ApkFile();
             String apk_path=cursor.getString(COLUMN_PATH);

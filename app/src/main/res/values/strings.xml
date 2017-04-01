@@ -10,7 +10,7 @@
     <string name="app_memory_clean">内存加速</string>
     <string name="app_rublish_clean">垃圾清理</string>
     <string name="app_autostart_manage">自启管理</string>
-    <string name="app_software_manage">软件管理</string>
+    <string name="app_software_manage">应用管理</string>
     <string name="cleaned">清理垃圾 (<xliff:g id="memory">%1$s</xliff:g>)</string>
     <string name="empty_cache">缓存为空.</string>
     <string name="scanning">扫描中…</string>

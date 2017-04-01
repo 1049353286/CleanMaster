@@ -2,6 +2,7 @@ package com.apricot.cleanmaster.fragment;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -85,7 +86,17 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     }
 
     private void createShortCut(){
-
+        Intent intent = new Intent();
+        intent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
+        intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "一键加速");
+        intent.putExtra("duplicate", false);
+        intent.putExtra(Intent.EXTRA_SHORTCUT_ICON, BitmapFactory.decodeResource(getResources(), R.mipmap.short_cut_icon));
+        Intent i = new Intent();
+        i.setAction("com.apricot.shortcut");
+        i.addCategory("android.intent.category.DEFAULT");
+        intent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, i);
+        getActivity().sendBroadcast(intent);
+        T.showLong(getActivity(), "“一键加速”快捷图标已创建");
     }
 
     private void shareMyApp(){
@@ -105,4 +116,6 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
         }
     }
+
+
 }

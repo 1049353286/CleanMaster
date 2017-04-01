@@ -5,11 +5,12 @@
 
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"
+    <uses-permission
+        android:name="android.permission.FORCE_STOP_PACKAGES"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="signature"
         android:sharedUserId="android.uid.system"
-        tools:ignore="ProtectedPermissions"></uses-permission>
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -36,6 +37,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:value="58d637b8aed17929f5001bd0" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="TestChannel" android:name="UMENG_CHANNEL"/>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,34 +47,47 @@
             </intent-filter>
         </activity>
         <activity android:name=".base.FragmentContainerActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.SoftwareManageActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.AutoStartManageActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.MemoryCleanActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.CacheCleanActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.AppTaskActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.AppDetailActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.BatteryUsageInfoActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.ApkSearchActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.UninstallCleanActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.AppBackpackActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.PhoneInfoActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.FileManageActivity"></activity>
-        <activity android:name=".ui.AppLockActivity"
-            android:theme="@style/MyTranslucentAppTheme"></activity>
-        <activity android:name=".ui.AppLockerActivity"></activity>
-        <activity android:name=".ui.AppLockSettingActivity"></activity>
+            android:theme="@style/MyTranslucentAppTheme"/>
+        <activity
+            android:name=".ui.SoftwareManageActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.AutoStartManageActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.MemoryCleanActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.CacheCleanActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.AppTaskActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.AppDetailActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.BatteryUsageInfoActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.ApkSearchActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.UninstallCleanActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.AppBackpackActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity
+            android:name=".ui.PhoneInfoActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity android:name=".ui.FileManageActivity" />
+        <activity
+            android:name=".ui.AppLockActivity"
+            android:theme="@style/MyTranslucentAppTheme" />
+        <activity android:name=".ui.AppLockerActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".ui.AppLockSettingActivity" />
         <activity
             android:screenOrientation="portrait"
             android:name=".ui.ShortCutActivity"
@@ -87,12 +103,16 @@
         </activity>
 
 
-        <service android:name=".service.CoreService"
-            android:exported="false"></service>
-        <service android:name=".service.CleanService"
-            android:exported="false"></service>
-        <service android:name=".service.AppLockerService"
-            android:exported="false"></service>
+        <service
+            android:name=".service.CoreService"
+            android:exported="false" />
+        <service
+            android:name=".service.CleanService"
+            android:exported="false" />
+        <service
+            android:name=".service.AppLockerService"
+            android:exported="false" />
+        <service android:name=".service.FileService" />
 
         <receiver
             android:name=".broadcast.BootCompleteReceiver"
@@ -103,7 +123,11 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".broadcast.SearchBroadCast"></receiver>
+        <receiver android:name=".broadcast.SearchBroadCast">
+            <intent-filter>
+                <action android:name="com.apricot.cleanmaster.KEYWORD_BROADCAST" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

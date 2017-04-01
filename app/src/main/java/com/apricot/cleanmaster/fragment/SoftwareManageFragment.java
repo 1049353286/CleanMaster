@@ -29,6 +29,7 @@ import com.apricot.cleanmaster.dao.WhiteListDao;
 import com.apricot.cleanmaster.utils.L;
 import com.apricot.cleanmaster.utils.StorageUtil;
 import com.apricot.cleanmaster.utils.T;
+import com.umeng.analytics.MobclickAgent;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -93,9 +94,15 @@ public class SoftwareManageFragment extends BaseFragment implements SoftwareAdap
         mWhiteListDao =new WhiteListDao(mContext);
     }
 
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd("AppManageFragment");
+    }
+
     @Override
     public void onResume() {
         super.onResume();
+        MobclickAgent.onPageStart("AppManageFragment"); //统计页面，"MainScreen"为页面名称，可自定义
         fillData();
     }
 

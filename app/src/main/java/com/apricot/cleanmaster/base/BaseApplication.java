@@ -3,14 +3,16 @@ package com.apricot.cleanmaster.base;
 import android.app.Application;
 import android.content.Context;
 
+import com.umeng.analytics.MobclickAgent;
+
 public class BaseApplication extends Application {
     private static BaseApplication mInstance;
 
 
-    private Context mContext;
+    private static BaseApplication mContext;
 
 
-    public static BaseApplication getInstance() {
+    public static BaseApplication getAppInstance() {
         return mInstance;
     }
 
@@ -20,6 +22,7 @@ public class BaseApplication extends Application {
         mInstance = this;
         mContext=this;
 
+        MobclickAgent.setScenarioType(mContext, MobclickAgent.EScenarioType.E_UM_NORMAL);
 
         MyCrashHandler myCrashHandler = MyCrashHandler.getInstance();
         myCrashHandler.init(getApplicationContext());
@@ -30,7 +33,7 @@ public class BaseApplication extends Application {
     @Override
     public void onLowMemory() {
         // TODO Auto-generated method stub
-
+        MobclickAgent.onKillProcess(mContext);
         android.os.Process.killProcess(android.os.Process.myPid());
         super.onLowMemory();
 

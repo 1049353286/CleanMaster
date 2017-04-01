@@ -21,6 +21,7 @@ import com.apricot.cleanmaster.bean.AppProcessInfo;
 import com.apricot.cleanmaster.bean.StorageSize;
 import com.apricot.cleanmaster.dao.WhiteListDao;
 import com.apricot.cleanmaster.service.CoreService;
+import com.apricot.cleanmaster.utils.L;
 import com.apricot.cleanmaster.utils.StorageUtil;
 import com.apricot.cleanmaster.utils.T;
 import com.etiennelawlor.quickreturn.library.enums.QuickReturnViewType;
@@ -39,6 +40,7 @@ import butterknife.OnClick;
  * Created by Apricot on 2016/10/8.
  */
 public class MemoryCleanActivity extends BaseSwipeBackActivity implements CoreService.OnProcessActionListener{
+    private static final String TAG="MemoryCleanActivity";
     @BindView(R.id.memory_clean_header)
     View mHeader;
     @BindView(R.id.memory_clean_listview)
@@ -131,6 +133,7 @@ public class MemoryCleanActivity extends BaseSwipeBackActivity implements CoreSe
         allMemory=0;
 
         List<AppInfo> whitelist=mWhiteListDao.queryAllWhiteApp();
+        L.d(TAG,whitelist.toString());
 
         for(AppProcessInfo processInfo:apps){
             if(processInfo.processName.equals("com.apricot.cleanmaster")){
@@ -139,7 +142,9 @@ public class MemoryCleanActivity extends BaseSwipeBackActivity implements CoreSe
             if(!processInfo.isSystem){
                 if(whitelist.size()>0){
                     for(int i=0;i<whitelist.size();i++){
-                        if(!processInfo.appName.equals(whitelist.get(i).getAppName())&&i==(whitelist.size()-1)){
+                        if(processInfo.appName.equals(whitelist.get(i).getAppName())){
+                            break;
+                        }else if(i==whitelist.size()-1){
                             mProcessInfoList.add(processInfo);
                             allMemory+=processInfo.memory;
                         }

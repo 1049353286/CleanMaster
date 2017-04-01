@@ -23,6 +23,7 @@ import com.apricot.cleanmaster.ui.SoftwareManageActivity;
 import com.apricot.cleanmaster.utils.AppUtil;
 import com.apricot.cleanmaster.utils.StorageUtil;
 import com.github.lzyzsd.circleprogress.ArcProgress;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -57,9 +58,14 @@ public class MainFragment extends BaseFragment{
         return v;
     }
 
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPageEnd("AppMainFragment");
+    }
     @Override
     public void onResume() {
         super.onResume();
+        MobclickAgent.onPageStart("AppMainFragment"); //统计页面，"MainScreen"为页面名称，可自定义
         fillData();
     }
 

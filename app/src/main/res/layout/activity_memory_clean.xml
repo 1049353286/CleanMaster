@@ -70,10 +70,9 @@
                 android:background="@color/md_grey_200"
                 android:fitsSystemWindows="true"
                 android:clipToPadding="false"
-                android:fastScrollEnabled="true"
                 android:divider="@null"
                 android:dividerHeight="2dp"
-                android:padding="12dp"></ListView>
+                android:padding="12dp" />
 
             <LinearLayout
                 android:visibility="gone"
